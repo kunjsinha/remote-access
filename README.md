@@ -22,7 +22,9 @@ The application follows a three-tier architecture:
 ## Requirements
 
 - Python 3.x
-- macOS (uses PyObjC for system control)
+- Works on **Windows, macOS, and Linux**
+
+> **Note**: The current `requirements.txt` includes macOS-specific dependencies (`pyobjc`). For Windows/Linux, you may need to remove these lines and install only the core dependencies (`Flask`, `mss`, `Pillow`, `pyautogui`).
 
 ## Installation
 
