@@ -1,0 +1,107 @@
+<!-- index.html to display the video feed -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <div class="logo-container">
+                    <div class="logo-icon"></div>
+                    <span class="logo">Remote Access</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="main-content">
+            <div class="video-container">
+                <div class="video-wrapper" id="video_wrapper">
+                    <img id="video_feed" src="/video_feed" alt="Video Feed">
+                    <div class="overlay" id="overlay">
+                        <div class="overlay-content">
+                            <span class="overlay-icon">⌨️</span>
+                            <span>Click to enable keyboard control</span>
+                        </div>
+                    </div>
+                    <button class="fullscreen-btn" id="fullscreen_btn" title="Toggle Fullscreen">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="buttons-row">
+                    <div class="end-container">
+                        <button class="end-btn" id="end-btn" action="/end">
+                            <span class="end-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                                    <line x1="12" y1="2" x2="12" y2="12"></line>
+                                </svg>
+                            </span>
+                            <span>End Session</span>
+                        </button>
+                    </div>
+
+                    <div class="upload-container">
+                        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+                            <label for="file_upload" class="upload-btn">
+                                <span class="upload-icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                                    </svg>
+                                </span>
+                                <span>Upload File</span>
+                            </label>
+                            <input type="file" name="file" id="file_upload" hidden onchange="this.form.submit()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-bar">
+                <div class="info-item">
+                    <span class="label">SCALE</span>
+                    <input type="range" id="scale_slider" min="0.1" max="1.0" step="0.1" value="0.5"
+                        class="scale-slider">
+                    <span class="value" id="scale_value">50%</span>
+                </div>
+                <div class="separator">/</div>
+                <div class="info-item">
+                    <span class="label">FPS</span>
+                    <input type="range" id="fps_slider" min="1" max="60" step="1" value="60" class="scale-slider">
+                    <span class="value" id="fps_value">60</span>
+                </div>
+                <div class="separator">/</div>
+                <div class="info-item">
+                    <span class="label">QUAL</span>
+                    <input type="range" id="quality_slider" min="1" max="100" step="1" value="30" class="scale-slider">
+                    <span class="value" id="quality_value">30%</span>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <footer class="footer">
+            <div class="controls-list">
+                <!-- temporary footer code -->
+            </div>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
