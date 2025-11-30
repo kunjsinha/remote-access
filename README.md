@@ -60,6 +60,9 @@ remote-access/
 ├── client/          # Frontend files (HTML, CSS, JS)
 ├── server/          # Backend Flask application
 ├── run_server.py    # Server entry point
+├── architecture.png # Architecture image
+├── LICENSE          # License file
+├── README.md        # README file
 └── requirements.txt # Python dependencies
 ```
 
