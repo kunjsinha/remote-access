@@ -66,6 +66,7 @@ remote-access/
 ├── architecture.png # Architecture image
 ├── LICENSE          # License file
 ├── README.md        # README file
+├── .gitignore       # gitignore file
 └── requirements.txt # Python dependencies
 ```
 
