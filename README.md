@@ -1,6 +1,7 @@
 # Remote Access
 
 A simple web-based remote desktop application that allows you to control your computer through a browser.
+This project was done to learn basic webdev with Flask.
 
 ## Features
 
